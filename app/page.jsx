@@ -1,37 +1,3 @@
-// 'use client';
-// import DuaCard from "@/components/DuaContent/DuaCard";
-// import DuaSection from "@/components/DuaContent/DuaSection";
-// import CategoryList from "@/components/Sidebar/CategoryList";
-// import useFetch from "@/hooks/useFetch";
-// import { useEffect, useState } from "react";
-
-// export default function Home() {
-//   const { duas } = useFetch();
-//   const [requireDuas, setRequiredDuas] = useState([]);
-
-//   useEffect(() => {
-//     if (duas && duas.length > 0) {
-//       setRequiredDuas(duas);
-//     }
-//   }, [duas]);
-//   console.log(duas)
-
-//   return (
-//     <div className="flex gap-6">
-//       <div className="w-[429px]">
-//         <CategoryList setRequiredDuas={setRequiredDuas} />
-//       </div>
-//       <div className="flex-1 h-screen overflow-y-auto px-4 no-scrollbar">
-//         <DuaSection />
-//         <div>
-//           {requireDuas.map((dua, index) => (
-//             <DuaCard key={dua._id} dua={dua} index={index} />
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 'use client';
 import DuaCard from "@/components/DuaContent/DuaCard";
 import DuaSection from "@/components/DuaContent/DuaSection";
@@ -68,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="flex gap-6">
-      <div className="w-[429px]">
+      <div>
         <CategoryList setRequiredDuas={handleSubcategoryClick} />
       </div>
       <div className="flex-1 h-screen overflow-y-auto px-4 no-scrollbar">

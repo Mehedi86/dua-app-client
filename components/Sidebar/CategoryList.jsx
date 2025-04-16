@@ -41,11 +41,10 @@ const CategoryList = ({ setRequiredDuas }) => {
     };
 
     return (
-        <aside className="rounded-[10px] min-h-[927px] overflow-y-auto  bg-white border border-[#E2E2E2]">
+        <aside className="md:w-[200px] lg:w-[300px] xl:w-[429px] rounded-[10px] min-h-[927px] overflow-y-auto  bg-white border border-[#E2E2E2]">
             <h2 className="text-center rounded-t-[10px] py-[18px] px-[124px] mb-4 bg-[#1FA45B] text-white">
                 Categories
             </h2>
-
             <div className='p-[15px] relative'>
                 <input
                     className='w-full p-[13px] pl-12 rounded-[7px] border-2 border-[#E2E2E2]'

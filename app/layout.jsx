@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
           <div className="col-span-2">
             <div>
               {/* user icon */}
-              <div className="max-w-[330px] flex justify-end mb-8 mx-auto">
+              <div className="max-w-[330px] flex justify-end mb-7 mx-auto">
                 <Image src="/Group_174.png" width={67} height={45} alt="img" />
               </div>
               <div>
