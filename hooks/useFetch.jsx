@@ -10,8 +10,9 @@ const useFetch = () => {
 
     useEffect(() => {
         const fetchCategories = async () => {
+            
             try {
-                const res = await fetch('http://localhost:5000/categories');
+                const res = await fetch('https://dua-app-backend-6exn4in0e-mehedi86s-projects.vercel.app/categories');
                 const data = await res.json();
                 setCategories(data);
             } catch (error) {
@@ -23,7 +24,7 @@ const useFetch = () => {
 
         const fetchSubCategories = async () => {
             try {
-                const res = await fetch('http://localhost:5000/subCategories');
+                const res = await fetch('https://dua-app-backend-6exn4in0e-mehedi86s-projects.vercel.app/subCategories');
                 const data = await res.json();
                 setSubCategories(data);
             } catch (error) {
@@ -34,7 +35,7 @@ const useFetch = () => {
         };
         const fetchDuas = async () => {
             try {
-                const res = await fetch('http://localhost:5000/duas');
+                const res = await fetch('https://dua-app-backend-6exn4in0e-mehedi86s-projects.vercel.app/duas');
                 const data = await res.json();
                 setDuas(data);
             } catch (error) {
