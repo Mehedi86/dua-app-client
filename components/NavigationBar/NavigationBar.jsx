@@ -3,7 +3,7 @@ import React from 'react'
 
 const NavigationBar = () => {
     return (
-        <div className='max-w-[100px] bg-white min-h-[927px] rounded-[24px] flex flex-col justify-between items-center py-2'>
+        <div className='max-w-[100px] bg-white min-h-[927px] rounded-[24px] flex flex-col justify-between items-center py-2 border border-[#E2E2E2]'>
             <Image src="/prayer.png" width={73} height={73} alt='prayer' />
             <div className='flex flex-col gap-[27px]'>
                 <Image src="/Home.png" width={38} height={38} alt='img' />

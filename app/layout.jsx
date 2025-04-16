@@ -1,10 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Sidebar from "@/components/Sidebar/CategoryList"
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import Image from "next/image";
 import SettingsSideBar from "@/components/SettingsPanel/SettingsSideBar";
-import DuaSection from "@/components/DuaContent/DuaSection";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,33 +22,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className="bg-[#E2E2E2] grid grid-cols-12 gap-6 py-12 px-[20px]">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="bg-[#F7F8FA] grid grid-cols-12 gap-6 py-12 px-[20px]">
           <div className="col-span-1">
             <NavigationBar />
           </div>
           <div className="col-span-9">
             {/* title and search bar */}
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-6 pr-4">
               <h1 className="text-[24px] mt-2 font-semibold">Dua Page</h1>
-              <div className="bg-white border-2 border-[#E2E2E2] rounded-[7px] flex">
-                <input className='w-[297px] p-[13px]' placeholder='Search by Dua Name' type="text" />
-                <Image src="/search.png" width={54} height={44} alt="img" />
+              <div className="bg-white border border-[#E2E2E2] rounded-[7px] flex">
+                <input className='max-w-[297px] p-3' placeholder='Search by Dua Name' type="text" />
+                <Image src="/search.png" width={54} height={40} alt="img" />
               </div>
             </div>
-            <div className="flex gap-6">
-              <Sidebar />
-              <div className="w-full">
-                {children}
-              </div>
-            </div>
+            {children}
           </div>
           <div className="col-span-2">
             <div>
               {/* user icon */}
-              <div className="max-w-[330px] flex  justify-end mb-8 mx-auto">
+              <div className="max-w-[330px] flex justify-end mb-8 mx-auto">
                 <Image src="/Group_174.png" width={67} height={45} alt="img" />
               </div>
               <div>
